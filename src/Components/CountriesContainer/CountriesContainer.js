@@ -11,6 +11,7 @@ const CountriesContainer = (props) => {
       capital={country.capital}
       id={country.area}
       key={country.name}
+      getCountryFunc={props.getCountryFunc}
     />
   ));
 

@@ -8,6 +8,7 @@ import { Link, Route, Switch } from "react-router-dom";
 function App() {
   const [countryData, setCountryData] = useState([]);
   const [query, setQuery] = useState("");
+  const [specificCountry, setSpecificCountry] = useState({});
 
   const filteredCountries = countryData.filter((country) => {
     return country.name.toLowerCase().includes(query.toLowerCase());
@@ -18,6 +19,10 @@ function App() {
       setCountryData(data);
     });
   }, []);
+
+  const getCountry = (name) => {
+    console.log(`${name} is clicked`);
+  };
 
   return (
     <div>
@@ -36,7 +41,12 @@ function App() {
         <Route
           path="/"
           exact
-          render={() => <CountriesContainer allCountries={filteredCountries} />}
+          render={() => (
+            <CountriesContainer
+              allCountries={filteredCountries}
+              getCountryFunc={getCountry}
+            />
+          )}
         />
 
         <Route path="/country/1" render={() => <h2>Country Details</h2>} />

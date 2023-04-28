@@ -12,6 +12,7 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: #fff;
+  cursor: pointer;
 }
 
 .country-card p,
