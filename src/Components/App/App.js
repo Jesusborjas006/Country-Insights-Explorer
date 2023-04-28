@@ -6,7 +6,11 @@ import CountriesContainer from "../CountriesContainer/CountriesContainer";
 
 function App() {
   const [countryData, setCountryData] = useState([]);
-  console.log(countryData)
+  const [query, setQuery] = useState("");
+
+  const filteredCountries = countryData.filter((country) => {
+    return country.name.toLowerCase().includes(query.toLowerCase());
+  });
 
   useEffect(() => {
     getCountries().then((data) => {
@@ -17,7 +21,13 @@ function App() {
   return (
     <div>
       <Navbar />
-      <CountriesContainer allCountries={countryData}/>
+      <input
+        type="text"
+        value={query}
+        onChange={(event) => setQuery(event.target.value)}
+        placeholder="Search for a country..."
+      />
+      <CountriesContainer allCountries={filteredCountries} />
     </div>
   );
 }
