@@ -21,12 +21,15 @@ function App() {
   return (
     <div>
       <Navbar />
-      <input
-        type="text"
-        value={query}
-        onChange={(event) => setQuery(event.target.value)}
-        placeholder="Search for a country..."
-      />
+      <form className="form">
+        <input
+        className="search-input"
+          type="text"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          placeholder="Search for a country..."
+        />
+      </form>
       <CountriesContainer allCountries={filteredCountries} />
     </div>
   );

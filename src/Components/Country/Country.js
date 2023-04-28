@@ -5,9 +5,16 @@ const Country = (props) => {
     <div className="country-card">
       <img className="flag-img" src={props.flag} alt={`${props.name} flag`} />
       <h2>{props.name}</h2>
-      <p>Population: {props.population}</p>
-      <p>Region: {props.region}</p>
-      <p className="capital-text">Capital: {props.capital}</p>
+      <p>
+        <span className="bold">Population:</span>{" "}
+        {props.population.toLocaleString("en-US")}
+      </p>
+      <p>
+        <span className="bold">Region:</span> {props.region}
+      </p>
+      <p className="capital-text">
+        <span className="bold">Capital:</span> {props.capital}
+      </p>
     </div>
   );
 };

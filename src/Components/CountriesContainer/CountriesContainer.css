@@ -1,7 +1,6 @@
 .countries-container {
-  background-color: #d5d0d0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 50px 25px;
-  padding: 40px;
+  padding: 50px;
 }
