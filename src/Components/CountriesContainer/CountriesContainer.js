@@ -4,6 +4,7 @@ const CountriesContainer = (props) => {
   const countryElements = props.allCountries.map((country) => (
     <Country
       name={country.name}
+      flag={country.flag}
       population={country.population}
       region={country.region}
       capital={country.capital}
