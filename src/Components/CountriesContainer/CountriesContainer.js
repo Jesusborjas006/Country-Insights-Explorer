@@ -1,10 +1,11 @@
 import Country from "../Country/Country";
+import "./CountriesContainer.css";
 
 const CountriesContainer = (props) => {
   const countryElements = props.allCountries.map((country) => (
     <Country
       name={country.name}
-      flag={country.flag}
+      flag={country.flags.png}
       population={country.population}
       region={country.region}
       capital={country.capital}

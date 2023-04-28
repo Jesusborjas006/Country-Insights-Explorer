@@ -1,3 +1,24 @@
 .flag-img {
-  width: 300px;
+  height: 210px;
+  width: 100%;
+  border-bottom: 1px solid #dedede;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 10px;
+}
+
+.country-card {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.country-card p,
+.country-card h2 {
+  padding: 10px 20px;
+}
+
+.capital-text {
+  margin-bottom: 20px;
 }
