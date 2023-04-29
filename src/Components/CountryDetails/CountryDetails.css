@@ -1,0 +1,47 @@
+.country-details-page {
+  padding: 0 50px;
+}
+
+.back-btn {
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.details-content {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10vh;
+}
+
+.country-details-img {
+  width: 40%;
+  border-radius: 10px;
+}
+
+.details-text-content {
+  /* border: 2px solid black; */
+  width: 60%;
+  padding: 0 10vw;
+  font-size: 18px;
+}
+
+.details-text-content {
+  line-height: 2;
+  display: flex;
+}
+
+.details-name {
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+.left-text {
+  /* border: 2px solid blue; */
+  margin: 0 10px;
+}
+
+.right-text {
+  /* border: 2px solid purple; */
+}

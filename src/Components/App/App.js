@@ -27,11 +27,6 @@ function App() {
     setCountryNameSelected(name);
   };
 
-  useEffect(() => {
-    fetch(`https://restcountries.com/v2/name/${setCountryNameSelected}`)
-      .then((response) => response.json())
-      .then((data) => console.log(data));
-  }, []);
 
   return (
     <div>
@@ -57,7 +52,7 @@ function App() {
           )}
         />
 
-        <Route path="/name/:countryName" render={() => <CountryDetails />} />
+        <Route path="/name/:countryName" render={() => <CountryDetails countrySelected={countryNameSelected}/>} />
       </Switch>
     </div>
   );
