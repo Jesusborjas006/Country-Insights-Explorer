@@ -3,12 +3,14 @@ import Navbar from "../Navbar/Navbar";
 import "./App.css";
 import getCountries from "../../apiCalls";
 import CountriesContainer from "../CountriesContainer/CountriesContainer";
-import { Link, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import CountryDetails from "../CountryDetails/CountryDetails";
 
 function App() {
   const [countryData, setCountryData] = useState([]);
   const [query, setQuery] = useState("");
-  const [specificCountry, setSpecificCountry] = useState({});
+  const [countryNameSelected, setCountryNameSelected] = useState("");
+  console.log("Country selected", countryNameSelected);
 
   const filteredCountries = countryData.filter((country) => {
     return country.name.toLowerCase().includes(query.toLowerCase());
@@ -20,15 +22,21 @@ function App() {
     });
   }, []);
 
-  const getCountry = (name) => {
-    console.log(`${name} is clicked`);
+  const getCountryName = (name) => {
+    console.log(name);
+    setCountryNameSelected(name);
   };
+
+  useEffect(() => {
+    fetch(`https://restcountries.com/v2/name/${setCountryNameSelected}`)
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }, []);
 
   return (
     <div>
       <Navbar />
       <form className="form">
-        <Link to="/country/1">New Page</Link>
         <input
           className="search-input"
           type="text"
@@ -44,12 +52,12 @@ function App() {
           render={() => (
             <CountriesContainer
               allCountries={filteredCountries}
-              getCountryFunc={getCountry}
+              getCountryFunc={getCountryName}
             />
           )}
         />
 
-        <Route path="/country/1" render={() => <h2>Country Details</h2>} />
+        <Route path="/name/:countryName" render={() => <CountryDetails />} />
       </Switch>
     </div>
   );

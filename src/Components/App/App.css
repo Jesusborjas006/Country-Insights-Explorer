@@ -2,6 +2,11 @@ body {
   background-color: #d5d0d0;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 .bold {
   font-weight: bold;
 }
