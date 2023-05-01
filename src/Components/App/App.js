@@ -28,13 +28,16 @@ function App() {
   };
 
   const toggleForm = () => {
-    console.log("Cliked / hidden");
     setFormDisplay(!formDisplay);
+  };
+
+  const toggleWithLogo = () => {
+    setFormDisplay(true);
   };
 
   return (
     <div>
-      <Navbar />
+      <Navbar toggleInput={toggleWithLogo}/>
 
       {formDisplay && (
         <form className="form">
