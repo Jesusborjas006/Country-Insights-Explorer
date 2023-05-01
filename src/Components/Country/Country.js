@@ -7,7 +7,10 @@ const Country = (props) => {
       <div
         className="country-card"
         id={props.name}
-        onClick={() => props.getCountryFunc(props.name)}
+        onClick={() => {
+          props.getCountryFunc(props.name);
+          props.toggleInput();
+        }}
       >
         <img className="flag-img" src={props.flag} alt={`${props.name} flag`} />
         <h2>{props.name}</h2>

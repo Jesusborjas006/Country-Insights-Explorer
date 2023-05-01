@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const CountryDetails = (props) => {
-  // console.log(props);
   const [countryDetails, setCountryDetails] = useState({});
   console.log(countryDetails);
 
@@ -18,7 +17,7 @@ const CountryDetails = (props) => {
 
   return (
     <div className="country-details-page">
-      <Link to="/" className="back-btn">
+      <Link to="/" className="back-btn" onClick={props.toggleInput}>
         Go Back
       </Link>
       <div className="details-content">

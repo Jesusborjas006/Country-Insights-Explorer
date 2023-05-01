@@ -10,7 +10,8 @@ function App() {
   const [countryData, setCountryData] = useState([]);
   const [query, setQuery] = useState("");
   const [countryNameSelected, setCountryNameSelected] = useState("");
-  console.log("Country selected", countryNameSelected);
+  const [formDisplay, setFormDisplay] = useState(true);
+  console.log(formDisplay);
 
   const filteredCountries = countryData.filter((country) => {
     return country.name.toLowerCase().includes(query.toLowerCase());
@@ -23,23 +24,30 @@ function App() {
   }, []);
 
   const getCountryName = (name) => {
-    console.log(name);
     setCountryNameSelected(name);
   };
 
+  const toggleForm = () => {
+    console.log("Cliked / hidden");
+    setFormDisplay(!formDisplay);
+  };
 
   return (
     <div>
       <Navbar />
-      <form className="form">
-        <input
-          className="search-input"
-          type="text"
-          value={query}
-          onChange={(event) => setQuery(event.target.value)}
-          placeholder="Search for a country..."
-        />
-      </form>
+
+      {formDisplay && (
+        <form className="form">
+          <input
+            className="search-input"
+            type="text"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="Search for a country..."
+          />
+        </form>
+      )}
+
       <Switch>
         <Route
           path="/"
@@ -48,11 +56,20 @@ function App() {
             <CountriesContainer
               allCountries={filteredCountries}
               getCountryFunc={getCountryName}
+              toggleInput={toggleForm}
             />
           )}
         />
 
-        <Route path="/name/:countryName" render={() => <CountryDetails countrySelected={countryNameSelected}/>} />
+        <Route
+          path="/name/:countryName"
+          render={() => (
+            <CountryDetails
+              countrySelected={countryNameSelected}
+              toggleInput={toggleForm}
+            />
+          )}
+        />
       </Switch>
     </div>
   );

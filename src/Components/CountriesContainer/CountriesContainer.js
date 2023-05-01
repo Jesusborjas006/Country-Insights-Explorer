@@ -12,6 +12,7 @@ const CountriesContainer = (props) => {
       id={country.area}
       key={country.name}
       getCountryFunc={props.getCountryFunc}
+      toggleInput={props.toggleInput}
     />
   ));
 
