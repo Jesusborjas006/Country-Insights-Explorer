@@ -9,7 +9,6 @@
 }
 
 .details-content {
-  /* border: 2px solid red; */
   display: flex;
   justify-content: space-between;
   margin-top: 10vh;
@@ -21,8 +20,7 @@
 }
 
 .details-text-content {
-  /* border: 2px solid black; */
-  width: 60%;
+  width: 100%;
   padding: 0 10vw;
   font-size: 18px;
 }
@@ -38,10 +36,28 @@
 }
 
 .left-text {
-  /* border: 2px solid blue; */
   margin: 0 10px;
 }
 
 .right-text {
-  /* border: 2px solid purple; */
+  margin-top: 68px;
+  margin-left: 50px;
+}
+
+.languages-arr {
+  display: flex;
+  border: 1px solid red;
+}
+
+.country-borders {
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+  align-items: center;
+}
+
+.border {
+  margin: 0 15px;
+  background: #fff;
+  padding: 10px 15px;
 }

@@ -11,7 +11,6 @@ function App() {
   const [query, setQuery] = useState("");
   const [countryNameSelected, setCountryNameSelected] = useState("");
   const [formDisplay, setFormDisplay] = useState(true);
-  console.log(formDisplay);
 
   const filteredCountries = countryData.filter((country) => {
     return country.name.toLowerCase().includes(query.toLowerCase());
