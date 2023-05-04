@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Country Insights Explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## [Check out site here](https://country-insights-explorer.vercel.app/)
 
-## Available Scripts
+## Abstract 
+This application displays countless cards that contain data of the country and it's flag. User's can search for a country to learn more about it and they're able to click the card to be shown more details. 
 
-In the project directory, you can run:
+### Installation Instructions:
+1. Fork and clone [this repo](https://github.com/Jesusborjas006/Country-Insights-Explorer).
+1. Copy the SSH key from the green "Code" button.
+1. In your terminal, use the command `git clone git@github.com:[https://github.com/Jesusborjas006/Country-Insights-Explorer]`.
+1. Run `npm install`.
+1. Do NOT run `npm audit fix --force` when prompted.
+1. Open the repo in your text editor to make any changes or inspect code.
+1. Run `npm start` in your terminal.
+1. Copy and paste the generated `localServer` address that your terminal provides into your browser address bar.
 
-### `npm start`
+## Preview of App:
+<img width="1504" alt="Screenshot 2023-05-02 at 8 49 58 PM" src="https://user-images.githubusercontent.com/111095858/235820013-b6a63a5d-070d-43ec-857d-20909d651371.png">
+<img width="1504" alt="Screenshot 2023-05-02 at 8 50 27 PM" src="https://user-images.githubusercontent.com/111095858/235820016-c20bee00-e9a9-436c-bf91-945b73a56ff3.png">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used:
+- React 
+- Javascript 
+- Router V5
+- Webpack
+- HTML / CSS
+- Lighthouse
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Contributor
+- Jesus Borjas [LinkedIn](https://www.linkedin.com/in/jesus-borjas-6589b920a/), [Github](https://github.com/jesusborjas006)
