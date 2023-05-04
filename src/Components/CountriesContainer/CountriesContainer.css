@@ -3,4 +3,5 @@
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 50px 25px;
   padding: 50px;
+  min-height: 85vh;
 }

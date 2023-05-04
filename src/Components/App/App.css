@@ -22,6 +22,12 @@ a {
   border: none;
 }
 
+.error-message {
+  text-align: center;
+  margin-top: 10vh;
+  font-size: 2rem;
+}
+
 /* Dark Mode */
 .navbar-dark {
   background-color: #21222a;
@@ -44,6 +50,7 @@ a {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 50px 25px;
   padding: 50px;
+  min-height: 85vh;
 }
 
 .form-dark {
@@ -85,4 +92,10 @@ a {
   height: 93vh;
   background-color: #282d35;
   color: #f1f1f1;
+}
+
+.error-message-dark {
+  text-align: center;
+  margin-top: 10vh;
+  font-size: 2rem;
 }

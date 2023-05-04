@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 
 const CountryDetails = (props) => {
   const [countryDetails, setCountryDetails] = useState({});
-  console.log(countryDetails);
 
   useEffect(() => {
     fetch(`https://restcountries.com/v2/name/${props.countrySelected}`)

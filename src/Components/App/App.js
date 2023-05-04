@@ -11,8 +11,7 @@ function App() {
   const [query, setQuery] = useState("");
   const [countryNameSelected, setCountryNameSelected] = useState("");
   const [formDisplay, setFormDisplay] = useState(true);
-  const [darkMode, setDarkMode] = useState(false)
-  console.log(darkMode)
+  const [darkMode, setDarkMode] = useState(false);
 
   const filteredCountries = countryData.filter((country) => {
     return country.name.toLowerCase().includes(query.toLowerCase());
@@ -37,12 +36,16 @@ function App() {
   };
 
   const toggleDarkMode = () => {
-    setDarkMode(prevMode => !prevMode)
-  }
+    setDarkMode((prevMode) => !prevMode);
+  };
 
   return (
     <div>
-      <Navbar toggleInput={toggleWithLogo} darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
+      <Navbar
+        toggleInput={toggleWithLogo}
+        darkMode={darkMode}
+        toggleDarkMode={toggleDarkMode}
+      />
 
       {formDisplay && (
         <form className={darkMode ? "form-dark" : "form"}>
@@ -60,14 +63,18 @@ function App() {
         <Route
           path="/"
           exact
-          render={() => (
-            <CountriesContainer
-              allCountries={filteredCountries}
-              getCountryFunc={getCountryName}
-              toggleInput={toggleForm}
-              darkMode={darkMode}
-            />
-          )}
+          render={() =>
+            !filteredCountries.length ? (
+              <h2 className={darkMode ? "error-message-dark" : "error-message"}>Sorry, no countries were found</h2>
+            ) : (
+              <CountriesContainer
+                allCountries={filteredCountries}
+                getCountryFunc={getCountryName}
+                toggleInput={toggleForm}
+                darkMode={darkMode}
+              />
+            )
+          }
         />
 
         <Route
