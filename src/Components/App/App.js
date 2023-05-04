@@ -11,6 +11,8 @@ function App() {
   const [query, setQuery] = useState("");
   const [countryNameSelected, setCountryNameSelected] = useState("");
   const [formDisplay, setFormDisplay] = useState(true);
+  const [darkMode, setDarkMode] = useState(false)
+  console.log(darkMode)
 
   const filteredCountries = countryData.filter((country) => {
     return country.name.toLowerCase().includes(query.toLowerCase());
@@ -34,12 +36,16 @@ function App() {
     setFormDisplay(true);
   };
 
+  const toggleDarkMode = () => {
+    setDarkMode(prevMode => !prevMode)
+  }
+
   return (
     <div>
-      <Navbar toggleInput={toggleWithLogo}/>
+      <Navbar toggleInput={toggleWithLogo} darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
 
       {formDisplay && (
-        <form className="form">
+        <form className={darkMode ? "form-dark" : "form"}>
           <input
             className="search-input"
             type="text"
@@ -59,6 +65,7 @@ function App() {
               allCountries={filteredCountries}
               getCountryFunc={getCountryName}
               toggleInput={toggleForm}
+              darkMode={darkMode}
             />
           )}
         />
@@ -69,6 +76,7 @@ function App() {
             <CountryDetails
               countrySelected={countryNameSelected}
               toggleInput={toggleForm}
+              darkMode={darkMode}
             />
           )}
         />

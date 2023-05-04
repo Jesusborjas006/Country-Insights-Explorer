@@ -1,5 +1,6 @@
 .country-details-page {
   padding: 70px 50px;
+  max-height: 100vh;
 }
 
 .back-btn {

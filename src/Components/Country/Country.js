@@ -5,14 +5,18 @@ const Country = (props) => {
   return (
     <Link to={`/name/${props.name}`}>
       <div
-        className="country-card"
+        className={props.darkMode ? "country-card-dark" : "country-card"}
         id={props.name}
         onClick={() => {
           props.getCountryFunc(props.name);
           props.toggleInput();
         }}
       >
-        <img className="flag-img" src={props.flag} alt={`${props.name} flag`} />
+        <img
+          className={props.darkMode ? "flag-img-dark" : "flag-img"}
+          src={props.flag}
+          alt={`${props.name} flag`}
+        />
         <h2>{props.name}</h2>
         <p>
           <span className="bold">Population:</span>{" "}

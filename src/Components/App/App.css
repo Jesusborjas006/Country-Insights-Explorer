@@ -21,3 +21,68 @@ a {
   border-radius: 5px;
   border: none;
 }
+
+/* Dark Mode */
+.navbar-dark {
+  background-color: #21222a;
+  color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+}
+
+.logo-dark {
+  background-color: #21222a;
+  color: #f1f1f1;
+}
+
+.countries-container-dark {
+  background-color: #282d35;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 50px 25px;
+  padding: 50px;
+}
+
+.form-dark {
+  padding: 50px;
+  background-color: #282d35;
+  color: white;
+}
+
+.country-card-dark {
+  background-color: #21222a;
+  color: #f1f1f1;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+
+.country-card-dark:hover {
+  scale: 1.05;
+}
+
+.country-card-dark p,
+.country-card-dark h2 {
+  padding: 10px 20px;
+}
+
+.flag-img-dark {
+  height: 210px;
+  width: 100%;
+  border-bottom: 1px solid #21222a;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 10px;
+}
+
+.country-details-page-dark {
+  padding: 70px 50px;
+  height: 93vh;
+  background-color: #282d35;
+  color: #f1f1f1;
+}

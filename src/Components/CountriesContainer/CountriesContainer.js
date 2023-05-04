@@ -13,10 +13,19 @@ const CountriesContainer = (props) => {
       key={country.name}
       getCountryFunc={props.getCountryFunc}
       toggleInput={props.toggleInput}
+      darkMode={props.darkMode}
     />
   ));
 
-  return <div className="countries-container">{countryElements}</div>;
+  return (
+    <div
+      className={
+        props.darkMode ? "countries-container-dark" : "countries-container"
+      }
+    >
+      {countryElements}
+    </div>
+  );
 };
 
 export default CountriesContainer;

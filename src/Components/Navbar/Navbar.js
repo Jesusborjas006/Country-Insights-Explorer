@@ -3,11 +3,15 @@ import "./Navbar.css";
 
 const Navbar = (props) => {
   return (
-    <nav className="navbar">
+    <nav className={props.darkMode ? "navbar-dark" : "navbar"}>
       <Link to="/" onClick={props.toggleInput}>
-        <h1>Country Insights Explorer</h1>
+        <h1 className={props.darkMode ? "logo-dark" : "logo"}>
+          Country Insights Explorer
+        </h1>
       </Link>
-      <p>Dark Mode</p>
+      <p onClick={props.toggleDarkMode} className="toggle-text">
+        {!props.darkMode ? "Dark Mode" : "Light Mode"}
+      </p>
     </nav>
   );
 };

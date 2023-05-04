@@ -16,7 +16,11 @@ const CountryDetails = (props) => {
 
   if (countryDetails) {
     return (
-      <div className="country-details-page">
+      <div
+        className={
+          props.darkMode ? "country-details-page-dark" : "country-details-page"
+        }
+      >
         <Link to="/" className="back-btn" onClick={props.toggleInput}>
           Go Back
         </Link>
@@ -67,12 +71,12 @@ const CountryDetails = (props) => {
                     : "Not Available"}
                 </p>
                 <p>
-                <span className="bold">Latitude: </span>
+                  <span className="bold">Latitude: </span>
                   {countryDetails.latlng && countryDetails.latlng[0]}
                 </p>
                 <p>
-                <span className="bold">Longitude: </span>
-                {countryDetails.latlng && countryDetails.latlng[1]}
+                  <span className="bold">Longitude: </span>
+                  {countryDetails.latlng && countryDetails.latlng[1]}
                 </p>
               </div>
             </div>
